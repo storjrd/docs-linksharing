@@ -24,6 +24,8 @@ uplink --access my-access-here share sj://my-bucket/my-directory --disallow-writ
 
 The output should resemble the following.
 
+Make sure to check that `Download` is allowed while `Upload`, `Lists`, and `Deletes` are all disallowed. Also verify that `Public Access` is set to true and that `Paths` is the one you intended.
+
 ```
 =========== ACCESS RESTRICTIONS ==========================================================
 Download  : Allowed
@@ -42,4 +44,18 @@ Endpoint     : xxx
 Public Access:  true
 ```
 
-Copy the new `Access Key Id`, `Secret Key`, and `Endpoint`, we'll need it in the next step.
+Copy the new `Access Key ID`, we'll need it in the next step.
+
+## 3. Create static URLs
+
+We can now access any of our files by interpolating our `Access Key ID` and file path into the following url template.
+
+```
+https://link.us1.storjshare.io/s/my-access-key-here/my-bucket/my-folder/my-file?raw`
+```
+
+Displaying images in a web page is trivial.
+
+``` html
+<img src="https://link.us1.storjshare.io/s/xxx/users/user500.jpg?raw">
+```
