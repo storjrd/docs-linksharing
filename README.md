@@ -17,7 +17,7 @@ This guide shows how to use our linksharing service to make public an entire dir
 We need to create a new access grant for use by our browser or client. Not only do we limit it to a specific bucket and/or directory, we also remove the permission to list files. This means an attacker cannot easily download all of our public files at once without knowing the filenames.
 
 ```
-uplink --access my-access-here share sj://my-bucket/my-directory --disallow-writes --disallow-lists --register --publi
+uplink --access my-access-here share sj://my-bucket/my-directory --disallow-writes --disallow-lists --register --public
 ```
 
 The output should resemble the following.
