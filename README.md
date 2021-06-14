@@ -2,9 +2,7 @@
 
 This guide is for cases where files have already been uploaded, be it via uplink CLI or programatically via [MT](https://github.com/storjrd/mt-usage) and they need to be accessed from a consistent URL.
 
-Typically, a presigned S3 URL is the correct choice. It is fine-grained to work for just a specific url so you don't make public any more than you need to.
-
-However, presigned S3 URLs need to be generated for every single file and expiry neccessarily.
+Typically, a presigned S3 URL is the correct choice. It gives fine-grained access to a specific file and must be generated per-file.
 
 This guide shows how to use our linksharing service to make public an entire directory or bucket in advance so a browser or client can access any file it knows the path to.
 
@@ -54,7 +52,7 @@ We can now access any of our files by interpolating our `Access Key ID` and file
 https://link.us1.storjshare.io/s/my-access-key-here/my-bucket/my-folder/my-file?raw
 ```
 
-Displaying images in a web page is trivial.
+Displaying images in a web page happens like so.
 
 ``` html
 <img src="https://link.us1.storjshare.io/s/xxx/users/user500.jpg?raw">
