@@ -17,7 +17,7 @@ This guide shows how to use our linksharing service to make public an entire dir
 We need to create a new access grant for use by our browser or client. Not only do we limit it to a specific bucket and/or directory, we also remove the permission to list files. This means an attacker cannot easily download all of our public files at once without knowing the filenames.
 
 ```
-uplink --access my-access-here share sj://my-bucket/my-directory --disallow-write --disallow-lists --register --publi
+uplink --access my-access-here share sj://my-bucket/my-directory --disallow-writes --disallow-lists --register --publi
 ```
 
 The output should resemble the following.
@@ -55,5 +55,5 @@ https://link.us1.storjshare.io/s/my-access-key-here/my-bucket/my-folder/my-file?
 Displaying images in a web page happens like so.
 
 ``` html
-<img src="https://link.us1.storjshare.io/s/xxx/users/user500.jpg?raw">
+<img src="https://link.us1.storjshare.io/s/xxx/users/user500.jpg?wrap=0">
 ```
