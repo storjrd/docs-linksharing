@@ -49,7 +49,7 @@ Copy the new `Access Key ID`, we'll need it in the next step.
 We can now access any of our files by interpolating our `Access Key ID` and file path into the following url template.
 
 ```
-https://link.us1.storjshare.io/s/my-access-key-here/my-bucket/my-folder/my-file?raw
+https://link.us1.storjshare.io/s/my-access-key-here/my-bucket/my-folder/my-file?wrap=0
 ```
 
 Displaying images in a web page happens like so.
